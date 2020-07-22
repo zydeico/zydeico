@@ -8,7 +8,9 @@ I am passionate about writing code and shaping ideas. I like to test and use new
 
 I have participated in small, medium and large projects of networks, development and security.
 
-My consulting proposes to create your project based on ideas and my experience.
+My consulting proposes to create your project based on ideas and my experience using tech skills how Node.JS, React.JS, Swift, SwiftUI, Kotlin, PHP, MySQL, NoSQL, AWS, Google Cloud and much more 🙌🏻
+
+
 
 <!--
 **zydeico/zydeico** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
