@@ -12,6 +12,8 @@
 
 * ♥️ Exploring new tech
 
+* 🔓 Security consultant
+
 
 
 ## Reach me via 👇🏻
