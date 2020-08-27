@@ -10,9 +10,9 @@
 
 * 📱 Mobile Developer
 
-* ♥️ Exploring new tech
-
 * 🔓 Security consultant
+
+* ♥️ Exploring new tech
 
 
 
