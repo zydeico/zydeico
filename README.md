@@ -18,4 +18,4 @@
 
 ## Reach me via 👇🏻
 
-[![Linkedin]( )](https://www.linkedin.com/in/jdanvz//)
+[![Linkedin] ](https://www.linkedin.com/in/jdanvz//)
