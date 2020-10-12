@@ -18,4 +18,4 @@
 
 ## Reach me via 👇🏻
 
-[![Linkedin](https://raw.githubusercontent.com/Shubham0812/Test-Angular/master/docs/linkedin.png)](https://www.linkedin.com/in/jdanvz//)
+[![Linkedin]( )](https://www.linkedin.com/in/jdanvz//)
