@@ -19,5 +19,3 @@
 ## Reach me via 👇🏻
 
 [[Linkedin] ](https://www.linkedin.com/in/jdanvz//)
-
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=zydeico)
