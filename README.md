@@ -4,15 +4,15 @@
 
 ## About Me 🙌🏻
 
-* 💻 Frontend Developer 
+* 💻  Frontend Developer 
 
-* 👨🏻‍💻 Backend Developer
+* 👨🏻‍💻  Backend Developer
 
-* 📱 Mobile Developer
+* 📱  Mobile Developer
 
-* 🔓 Security consultant
+* 🔓  Security consultant
 
-* ♥️ Exploring new tech
+* ♥️  Exploring new tech
 
 
 
