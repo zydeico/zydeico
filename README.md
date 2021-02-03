@@ -12,7 +12,7 @@
 
 * 🔓  Security consultant
 
-* ♥️  Exploring new tech
+* 🤖  Exploring new tech
 
 
 
