@@ -10,7 +10,7 @@
 
 * 📱  Mobile Developer
 
-* 🔓  Security consultant
+* 🔓  Former security analyst
 
 * 🤖  Exploring new tech
 
