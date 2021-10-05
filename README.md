@@ -4,11 +4,11 @@
 
 ## About Me 🙌🏻
 
-* 💻  Frontend Developer 
+* 📱  iOS Developer
+
+* 💻  Frontend Developer
 
 * 👨🏻‍💻  Backend Developer
-
-* 📱  Mobile Developer
 
 * 🔓  Former security analyst
 
