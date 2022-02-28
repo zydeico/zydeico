@@ -14,6 +14,8 @@
 
 * 🤖  Exploring new tech
 
+* ⛓ Blockchain developer
+
 
 
 ## Reach me via 👇🏻
