@@ -1,5 +1,3 @@
-**Hi there** 👋🏻
-
 # Hello world!, I'm software engineer, which are your superpower?
 
 ## About Me 🙌🏻
@@ -12,10 +10,7 @@
 
 * 🔓  Former security analyst
 
-* 🤖  Exploring new tech
-
-* ⛓ Blockchain developer
-
+* 🤖  AI researcher
 
 
 ## Reach me via 👇🏻
