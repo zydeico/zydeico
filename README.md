@@ -2,7 +2,7 @@
 
 ## About Me 🙌🏻
 
-* 📱  iOS Developer
+* 📱  Apple platforms engineer
 
 * 💻  Frontend Developer
 
