@@ -3,20 +3,16 @@
 import Foundation
 
 enum Location: String, CustomStringConvertible {
-    
     case Mexico
     var description: String { rawValue }
-    
 }
 
 enum Languages: String, CustomStringConvertible {
-    
     case Spanish, English
     var description: String { rawValue }
     var spanishName: String {
         self == .Spanish ? "Español" : "Inglés"
     }
-    
 }
 
 class Daniel {
