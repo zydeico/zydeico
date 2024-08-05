@@ -39,32 +39,24 @@ class Developer {
 class Daniel: Developer {
 
     let name = "Daniel Vázquez"
-    let age = 30
     let location: Location = .Mexico
     let languages: [Languages] = [.Spanish, .English]
     let programmingLanguages = ["Swift", "Objective-C", "JavaScript", "Python"]
-    let markup = ["HTML", "CSS", ""]
-    
-    // New details
+    let frameworks = ["NodeJS", "SwiftUI", "VueJS", "ReactJS"]
+    let cloduStack = ["AWS", "Google Cloud Platform", "Azure"]
+    let markup = ["HTML", "CSS"]
     let introduction = "Hello world!, I'm software engineer, which are your superpower?"
-    let aboutMe = """
-    About Me 🙌🏻
-
-    * 📱  Apple platforms engineer
-    * 💻  Frontend Developer
-    * 👨🏻‍💻  Backend Developer
-    * 🔓  Former security analyst
-    * 🤖  AI researcher
-    """
-    let reachMe = "Reach me via 👇🏻\n[Linkedin](https://www.linkedin.com/in/jdanvz/)"
+    let skilss = ["Mobile developer", "Backend developer"]
+    let reachMe = "Linkedin: https://www.linkedin.com/in/jdanvz/"
 
     func details() -> String {
         var details = ""
         
         for detail in Mirror(reflecting: self).children {
+            
             guard let label = detail.label else { continue }
             
-            if ["introduction", "aboutMe", "reachMe"].contains(label) {
+            if ["reachMe"].contains(label) {
                 continue
             }
             
@@ -82,8 +74,6 @@ class Daniel: Developer {
             }
         }
         
-        details.append("\n\(introduction)\n\n")
-        details.append("\(aboutMe)\n\n")
         details.append("\(reachMe)\n")
         
         return details
