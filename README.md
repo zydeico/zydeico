@@ -2,81 +2,54 @@
 
 import Foundation
 
-enum Location: String {
+enum Location: String, CustomStringConvertible {
+    
     case Mexico
+    var description: String { rawValue }
+    
 }
 
-enum Languages: String {
-    case Spanish
-    case English
+enum Languages: String, CustomStringConvertible {
     
+    case Spanish, English
+    var description: String { rawValue }
     var spanishName: String {
-        switch self {
-        case .Spanish:
-            return "Español"
-        case .English:
-            return "Inglés"
-        }
+        self == .Spanish ? "Español" : "Inglés"
     }
-}
-
-extension Location {
-    var description: String {
-        return self.rawValue
-    }
-}
-
-extension Languages {
-    var description: String {
-        return self.rawValue
-    }
-}
-
-class Developer {
     
 }
 
-class Daniel: Developer {
-
+class Daniel {
+    
     let name = "Daniel Vázquez"
     let location: Location = .Mexico
     let languages: [Languages] = [.Spanish, .English]
     let programmingLanguages = ["Swift", "Objective-C", "JavaScript", "Python"]
     let frameworks = ["NodeJS", "SwiftUI", "VueJS", "ReactJS"]
-    let cloduStack = ["AWS", "Google Cloud Platform", "Azure"]
+    let cloudStack = ["AWS", "Google Cloud Platform", "Azure"]
     let markup = ["HTML", "CSS"]
     let introduction = "Hello world!, I'm software engineer, which are your superpower?"
-    let skilss = ["Mobile developer", "Backend developer"]
-    let reachMe = "Linkedin: https://www.linkedin.com/in/jdanvz/"
-
+    let skills = ["Mobile developer", "Backend developer"]
+    private let reachMe = "Linkedin: https://www.linkedin.com/in/jdanvz/"
+    
     func details() -> String {
-        var details = ""
-        
-        for detail in Mirror(reflecting: self).children {
+        let mirror = Mirror(reflecting: self)
+        let details = mirror.children.compactMap { child -> String? in
+            guard let label = child.label, label != "reachMe" else { return nil }
             
-            guard let label = detail.label else { continue }
-            
-            if ["reachMe"].contains(label) {
-                continue
-            }
-            
+            let value: String
             if label == "languages" {
-                if let languagesArray = detail.value as? [Languages] {
-                    let languageNames = languagesArray.map { $0.spanishName }.joined(separator: ", ")
-                    details.append("\(label.capitalized): \(languageNames)\n")
-                }
-            } else if let array = detail.value as? [CustomStringConvertible] {
-                details.append("\(label.capitalized): [\(array.map { $0.description }.joined(separator: ", "))]\n")
-            } else if let customDescription = detail.value as? CustomStringConvertible {
-                details.append("\(label.capitalized): \(customDescription.description)\n")
+                value = (child.value as? [Languages])?.map { $0.spanishName }.joined(separator: ", ") ?? ""
+            } else if let array = child.value as? [CustomStringConvertible] {
+                value = "[\(array.map { $0.description }.joined(separator: ", "))]"
             } else {
-                details.append("\(label.capitalized): \(detail.value)\n")
+                value = String(describing: child.value)
             }
-        }
+            
+            return "\(label.capitalized): \(value)"
+        }.joined(separator: "\n")
         
-        details.append("\(reachMe)\n")
-        
-        return details
+        return details + "\n\(reachMe)\n"
     }
 }
 
