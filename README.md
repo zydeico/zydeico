@@ -25,7 +25,7 @@ class Daniel {
     let cloudStack = ["AWS", "Google Cloud Platform", "Azure"]
     let markup = ["HTML", "CSS"]
     let introduction = "Hello world!, I'm software engineer, which are your superpower?"
-    let skills = ["Mobile developer", "Backend developer"]
+    let skills = ["Mobile developer", "Backend developer", "IA & ML researcher"]
     private let reachMe = "Linkedin: https://www.linkedin.com/in/jdanvz/"
     
     func details() -> String {
