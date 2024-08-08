@@ -21,7 +21,7 @@ class Daniel {
     let location: Location = .Mexico
     let languages: [Languages] = [.Spanish, .English]
     let programmingLanguages = ["Swift", "Objective-C", "JavaScript", "Python"]
-    let frameworks = ["NodeJS", "SwiftUI", "VueJS", "ReactJS"]
+    let frameworks = ["NodeJS", "Django", "SwiftUI", "VueJS", "ReactJS"]
     let cloudStack = ["AWS", "Google Cloud Platform", "Azure"]
     let markup = ["HTML", "CSS"]
     let introduction = "Hello world!, I'm software engineer, which are your superpower?"
