@@ -23,6 +23,7 @@ class Daniel {
     let programmingLanguages = ["Swift", "Objective-C", "JavaScript", "Python"]
     let frameworks = ["NodeJS", "Django", "SwiftUI", "VueJS", "ReactJS"]
     let cloudStack = ["AWS", "Google Cloud Platform", "Azure"]
+    let databasesStack = ["NoSQL", "SQL", "PostgreSQL", "MongoDB"]
     let markup = ["HTML", "CSS"]
     let introduction = "Hello world!, I'm software engineer, which are your superpower?"
     let skills = ["Mobile developer", "Backend developer", "IA & ML researcher"]
