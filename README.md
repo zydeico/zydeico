@@ -20,8 +20,8 @@ class Daniel {
     let name = "Daniel Vázquez"
     let location: Location = .Mexico
     let languages: [Languages] = [.Spanish, .English]
-    let programmingLanguages = ["Swift", "Objective-C", "JavaScript", "Python"]
-    let frameworks = ["NodeJS", "Django", "SwiftUI", "VueJS", "ReactJS"]
+    let programmingLanguages = ["Swift", "Objective-C", "JavaScript", "Python", "TypeScript", "Kotlin", "Java"]
+    let frameworks = ["NodeJS", "Django", "SwiftUI", "VueJS", "ReactJS", "NextJS", "JetPack Compose"]
     let cloudStack = ["AWS", "Google Cloud Platform", "Azure"]
     let databasesStack = ["NoSQL", "SQL", "PostgreSQL", "MongoDB"]
     let markup = ["HTML", "CSS"]
