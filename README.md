@@ -1,33 +1,45 @@
 ```swift
-
 import Foundation
 
 enum Location: String, CustomStringConvertible {
-    case Mexico
-    var description: String { rawValue }
+    case mexico = "Mexico"
+    
+    var description: String {
+        return rawValue
+    }
 }
 
-enum Languages: String, CustomStringConvertible {
-    case Spanish, English
-    var description: String { rawValue }
+enum Language: String, CustomStringConvertible {
+    case spanish = "Spanish"
+    case english = "English"
+    
+    var description: String {
+        return rawValue
+    }
+    
     var spanishName: String {
-        self == .Spanish ? "Español" : "Inglés"
+        switch self {
+        case .spanish:
+            return "Español"
+        case .english:
+            return "Inglés"
+        }
     }
 }
 
 class Daniel {
     
     let name = "Daniel Vázquez"
-    let location: Location = .Mexico
-    let languages: [Languages] = [.Spanish, .English]
+    let location: Location = .mexico
+    let languages: [Language] = [.spanish, .english]
     let programmingLanguages = ["Swift", "Objective-C", "JavaScript", "Python", "TypeScript", "Kotlin", "Java"]
     let frameworks = ["NodeJS", "Django", "SwiftUI", "VueJS", "ReactJS", "NextJS", "JetPack Compose"]
     let cloudStack = ["AWS", "Google Cloud Platform", "Azure"]
     let databasesStack = ["NoSQL", "SQL", "PostgreSQL", "MongoDB"]
     let markup = ["HTML", "CSS"]
-    let introduction = "Hello world!, I'm software engineer, which are your superpower?"
-    let skills = ["Mobile developer", "Backend developer", "IA & ML researcher"]
-    private let reachMe = "Linkedin: https://www.linkedin.com/in/jdanvz/"
+    let introduction = "Hello world! I'm a software engineer. What are your superpowers?"
+    let skills = ["Mobile developer", "Backend developer", "AI & ML researcher"]
+    private let reachMe = "LinkedIn: https://www.linkedin.com/in/jdanvz/"
     
     func details() -> String {
         let mirror = Mirror(reflecting: self)
@@ -36,7 +48,7 @@ class Daniel {
             
             let value: String
             if label == "languages" {
-                value = (child.value as? [Languages])?.map { $0.spanishName }.joined(separator: ", ") ?? ""
+                value = (child.value as? [Language])?.map { $0.spanishName }.joined(separator: ", ") ?? ""
             } else if let array = child.value as? [CustomStringConvertible] {
                 value = "[\(array.map { $0.description }.joined(separator: ", "))]"
             } else {
