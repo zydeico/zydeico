@@ -1,21 +1,13 @@
 ```swift
 import Foundation
 
-enum Location: String, CustomStringConvertible {
+enum Location: String {
     case mexico = "Mexico"
-    
-    var description: String {
-        return rawValue
-    }
 }
 
-enum Language: String, CustomStringConvertible {
+enum Language: String {
     case spanish = "Spanish"
     case english = "English"
-    
-    var description: String {
-        return rawValue
-    }
     
     var spanishName: String {
         switch self {
@@ -28,7 +20,6 @@ enum Language: String, CustomStringConvertible {
 }
 
 class Daniel {
-    
     let name = "Daniel Vázquez"
     let location: Location = .mexico
     let languages: [Language] = [.spanish, .english]
@@ -41,19 +32,11 @@ class Daniel {
     private let reachMe = "LinkedIn: https://www.linkedin.com/in/jdanvz/"
     
     func composeGreeting() -> String {
-        let languagesSpoken = languages.map { $0.spanishName }.joined(separator: ", ")
-        let programmingLangs = programmingLanguages.joined(separator: ", ")
-        let frameworksUsed = frameworks.joined(separator: ", ")
-        let cloudTech = cloudStack.joined(separator: ", ")
-        let dbTech = databasesStack.joined(separator: ", ")
-        let markupLangs = markup.joined(separator: ", ")
-        let skillsSet = skills.joined(separator: ", ")
-
         return """
-        Hi, I'm \(name), a developer from \(location.description). I speak \(languagesSpoken).
-        I work with programming languages like \(programmingLangs), and use frameworks such as \(frameworksUsed).
-        I have experience with cloud technologies like \(cloudTech), databases like \(dbTech), and markup languages like \(markupLangs).
-        My main skills are \(skillsSet).
+        Hi, I'm \(name), a developer from \(location.rawValue). I speak \(languages.map { $0.spanishName }.joined(separator: ", ")).
+        I work with programming languages like \(programmingLanguages.joined(separator: ", ")), and use frameworks such as \(frameworks.joined(separator: ", ")).
+        I have experience with cloud technologies like \(cloudStack.joined(separator: ", ")), databases like \(databasesStack.joined(separator: ", ")), and markup languages like \(markup.joined(separator: ", ")).
+        My main skills are \(skills.joined(separator: ", ")).
         Feel free to reach me on LinkedIn: \(reachMe)
         """
     }
