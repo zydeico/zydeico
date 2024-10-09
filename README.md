@@ -20,9 +20,9 @@ enum Language: String, CustomStringConvertible {
     var spanishName: String {
         switch self {
         case .spanish:
-            return "Español"
+            return "Spanish"
         case .english:
-            return "Inglés"
+            return "English"
         }
     }
 }
@@ -37,31 +37,28 @@ class Daniel {
     let cloudStack = ["AWS", "Google Cloud Platform", "Azure"]
     let databasesStack = ["NoSQL", "SQL", "PostgreSQL", "MongoDB"]
     let markup = ["HTML", "CSS"]
-    let introduction = "Hello world! I'm a software engineer. What are your superpowers?"
     let skills = ["Mobile developer", "Backend developer", "AI & ML researcher"]
     private let reachMe = "LinkedIn: https://www.linkedin.com/in/jdanvz/"
     
-    func details() -> String {
-        let mirror = Mirror(reflecting: self)
-        let details = mirror.children.compactMap { child -> String? in
-            guard let label = child.label, label != "reachMe" else { return nil }
-            
-            let value: String
-            if label == "languages" {
-                value = (child.value as? [Language])?.map { $0.spanishName }.joined(separator: ", ") ?? ""
-            } else if let array = child.value as? [CustomStringConvertible] {
-                value = "[\(array.map { $0.description }.joined(separator: ", "))]"
-            } else {
-                value = String(describing: child.value)
-            }
-            
-            return "\(label.capitalized): \(value)"
-        }.joined(separator: "\n")
-        
-        return details + "\n\(reachMe)\n"
+    func composeGreeting() -> String {
+        let languagesSpoken = languages.map { $0.spanishName }.joined(separator: ", ")
+        let programmingLangs = programmingLanguages.joined(separator: ", ")
+        let frameworksUsed = frameworks.joined(separator: ", ")
+        let cloudTech = cloudStack.joined(separator: ", ")
+        let dbTech = databasesStack.joined(separator: ", ")
+        let markupLangs = markup.joined(separator: ", ")
+        let skillsSet = skills.joined(separator: ", ")
+
+        return """
+        Hi, I'm \(name), a developer from \(location.description). I speak \(languagesSpoken).
+        I work with programming languages like \(programmingLangs), and use frameworks such as \(frameworksUsed).
+        I have experience with cloud technologies like \(cloudTech), databases like \(dbTech), and markup languages like \(markupLangs).
+        My main skills are \(skillsSet).
+        Feel free to reach me on LinkedIn: \(reachMe)
+        """
     }
 }
 
-print(Daniel().details())
+print(Daniel().composeGreeting())
 
 ```
