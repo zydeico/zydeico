@@ -23,12 +23,12 @@ class Daniel {
     let name = "Daniel Vázquez"
     let location: Location = .mexico
     let languages: [Language] = [.spanish, .english]
-    let programmingLanguages = ["Swift", "Objective-C", "JavaScript", "Python", "TypeScript", "Kotlin", "Java"]
-    let frameworks = ["NodeJS", "Django", "SwiftUI", "VueJS", "ReactJS", "NextJS", "JetPack Compose"]
+    let programmingLanguages = ["Swift", "Objective-C", "JavaScript", "Python", "TypeScript", "Kotlin", "Java", "Go"]
+    let frameworks = ["NodeJS", "Django", "SwiftUI", "VueJS", "ReactJS", "NextJS", "JetPack Compose", "Vapor"]
     let cloudStack = ["AWS", "Google Cloud Platform", "Azure"]
     let databasesStack = ["NoSQL", "SQL", "PostgreSQL", "MongoDB"]
     let markup = ["HTML", "CSS"]
-    let skills = ["Mobile developer", "Backend developer", "AI & ML researcher"]
+    let skills = ["Mobile developer", "Front-end developer", "Backend developer", "AI & ML researcher"]
     private let reachMe = "LinkedIn: https://www.linkedin.com/in/jdanvz/"
     
     func composeGreeting() -> String {
