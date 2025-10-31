@@ -5,21 +5,14 @@ enum Location: String {
     case mexico = "Mexico"
 }
 
-enum Language: String {
+enum Language: String, CaseIterable {
     case spanish = "Spanish"
     case english = "English"
     
-    var spanishName: String {
-        switch self {
-        case .spanish:
-            return "Spanish"
-        case .english:
-            return "English"
-        }
-    }
+    var displayName: String { rawValue }
 }
 
-class Daniel {
+struct Daniel {
     let name = "Daniel Vázquez"
     let location: Location = .mexico
     let languages: [Language] = [.spanish, .english]
@@ -29,13 +22,17 @@ class Daniel {
     let databasesStack = ["NoSQL", "SQL", "PostgreSQL", "MongoDB"]
     let markup = ["HTML", "CSS"]
     let skills = ["Mobile developer", "Front-end developer", "Backend developer", "AI & ML researcher"]
-    private let reachMe = "LinkedIn: https://www.linkedin.com/in/jdanvz/"
+    private let reachMe = "https://www.linkedin.com/in/jdanvz/"
     
     func composeGreeting() -> String {
-        return """
-        Hi, I'm \(name), a developer from \(location.rawValue). I speak \(languages.map { $0.spanishName }.joined(separator: ", ")).
-        I work with programming languages like \(programmingLanguages.joined(separator: ", ")), and use frameworks such as \(frameworks.joined(separator: ", ")).
-        I have experience with cloud technologies like \(cloudStack.joined(separator: ", ")), databases like \(databasesStack.joined(separator: ", ")), and markup languages like \(markup.joined(separator: ", ")).
+        """
+        Hi, I'm \(name), a developer from \(location.rawValue).
+        I speak \(languages.map { $0.displayName }.joined(separator: ", ")).
+        I work with programming languages like \(programmingLanguages.joined(separator: ", ")),
+        and use frameworks such as \(frameworks.joined(separator: ", ")).
+        I have experience with cloud technologies like \(cloudStack.joined(separator: ", ")),
+        databases like \(databasesStack.joined(separator: ", ")),
+        and markup languages like \(markup.joined(separator: ", ")).
         My main skills are \(skills.joined(separator: ", ")).
         Feel free to reach me on LinkedIn: \(reachMe)
         """
@@ -43,5 +40,4 @@ class Daniel {
 }
 
 print(Daniel().composeGreeting())
-
 ```
